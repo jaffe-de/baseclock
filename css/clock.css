@@ -1,155 +1,17 @@
-body {color: #2e6e9e; background-color: #eaf4fd; font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;}
-
-/*button:disabled {background-color: #E5E9EE;}
-button:active {background-color: #ffdf88;}
-button {background-color: #ffad55; border: 1px solid gray; border-radius: 5px 5px 5px 5px; margin: 0 10px 0 0;}
-*/
+body {
+	color: #2e6e9e; 
+	background-color: #eaf4fd; 
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+	font-size: 17pt;
+}
 input, textarea, select, h2, h3, h4, h5, h6 {color: #2e6e9e;}
-select {font-weight: normal; border: 1px solid #bbb;}
 
-
+.footer {font-size: .5em;}
 .hide-on-startup {display: none;}
-
-.header span {font-size: 1.2em;}
-.header-title-left {}
-.header-title-right {text-align: right;}
-.header-title-left span, .header-title-right span {font-weight: normal;}
-
-.separator {margin: 0;}
-a:link, a:visited, a:hover, a:active {text-decoration: none; color: #2e6e9e;}
-a:hover {color: #000;}
-
-.invalid {border: 2px solid red; background-color: #fdd;}
-
-.content-container {height: 670px; margin-top: 5px;}
-.no-right-padding {padding-right: 0;}
-.list-group-item.list-item-compact.active {color: white;}
-.inactive {color: red;}
-
-.compact {padding: 2px 5px;}
-.button-fix-height {height: 40px;}
-.error {color: red; font-weight: normal; border: 2px solid red;}
-.error-text {color: red;}
-
-.import-field {overflow-x: hidden; white-space: nowrap;}
-.import-list-buffer {padding-bottom: 3px; padding-top: 3px; border-bottom: 1px solid #ccc;}
-/* Important required to cancel fuelux css code */
-.import-select-text {font-size: 75% !important; width: auto !important; height: 20px!important;}
-.underline {border-bottom: 1px solid #aaa;}
-
-.validate-error {border: 1px solid red; background-color: #fee;}
-.validate-error::-webkit-input-placeholder {color: black; opacity: 0.5;}
-.validate-error:-moz-placeholder {color: black; opacity: 0.5;}
-.validate-error::-moz-placeholder {color: black; opacity: 0.5;}
-.validate-error:-ms-input-placeholder {color: black; opacity: 0.5;}
-
-.two-column-separator {border-right: 1px solid #ddd;}
-
-.scroll {overflow-y: scroll; overflow-x: hidden;}
-.list-restrict-size {height: 470px;}
-.second-list-restrict-size {height: 430px;}
-.third-list-restrict-size {height: 410px;}
-.small-list-restrict-size {height: 200px;}
-.schedule-list-restrict-size {height: 150px;}
-
-.copy-paste {width: 535px; height: 100px;}
-.bullet-description li {margin-bottom: 7px;}
-
-.list-header {margin: 5px 0 5px 4px; font-weight: bold;}
-.list {border: 1px solid #ddd; list-style-type: none; overflow: hidden; background-color: #eee; min-height: 300px; max-height: 515px; overflow-y: scroll; margin-bottom: 5px;}
-.list li {margin: 0 2px 0 2px; width: 250px;} /* overflow is hidden */
-.filter-text {width: 70%;}
-.btn-include-exclude {width: 50px;}
-.include-exclude-height {min-height: 200px;}
-.box-with-height {height: 200px;}
-.add-bottom-margin {margin-bottom: 15px;}
-.small-top-margin {margin-top: 5px;}
-.small-tab {height: 30px;}
-.no-bold {font-weight: normal;}
-
-.table-super-condensed > thead > tr > th,
-.table-super-condensed > tbody > tr > th,
-.table-super-condensed > tfoot > tr > th,
-.table-super-condensed > thead > tr > td,
-.table-super-condensed > tbody > tr > td,
-.table-super-condensed > tfoot > tr > td {
-  padding: 2px;
-}
-.record-grade-input {height: 16px; font-size: 11px;}
-.full-width-input {width: 100%;}
-.record-panel-height {max-height: 542px; overflow-x: hidden; overflow-y: scroll;}
-
-select.form-control {color: #2e6e9e;}
-
-.default-schedule {font-weight: bold;}
-
-.table-nonfluid {width: auto;}
-
-.selected {background-color: #3875d7; color: #fff;}
-
-.login {margin: 30px; text-align: center;}
-
-.formLayout {padding: 10px;}
-.formLayout label {width: 120px; padding-top: 3px;}
-.formLayout label, .formLayout input {display: block;float: left;margin-bottom: 5px;}
-.formLayout label {text-align: right;padding-right: 20px;}
-.formLayout input[type='text'] {margin-right: 10px; font-size: 0.9em;}
-.formLayout input[type='checkbox'] {margin-top: 6px;}
-.formLayout table td:first-child {border-right: 1px solid gray;}
-
-br
-{
-    clear: left;
-}
-
-.pr-header {font-weight: bold;}
-.student-pr-restrict-size {max-height: 500px;}
-.import-text {width:100%; height: 408px; border-color: #ccc;}
-.bottom-buffer {margin-bottom: 10px;}
-
-.checkin-field-height {height: 55px; font-size: 35px;}
-.offline {color: red;}
-
-.attButton {border: 1px solid lightgray; margin: 0 2px 0 0; padding: 0 2px 0 2px; border-radius: 8px; cursor: pointer;}
-.attButton:hover {background-color: #FFDF88;}
-.attButton:active {background-color: #E5E9EE;}
-
-.tardy-color: {color: #ddaa00;}
-.present-color: {color: green;}
-.absent-color: {color: red;}
-
-.checkin-width: {width: 75px;}
-
-/* Progress report formatting 
-.prCol1, .prCol2, .prCol1Small, .prCol2Small {display: inline-block; vertical-align: top;}
-.prCol1 {width: 400px;}
-.prCol1Small {width: 280px;}
-.prCol2 {text-align: right; width: 75px}
-.prCol2Small {text-align: right; width: 50px}
-.pr {width: 500px; color: #2E6E9E; margin-top: 15px; line-height: 1.2em; font-size: 1em;}
-.prSmall {width: 350px; color: #2E6E9E; margin-top: 15px; line-height: 1em; font-size: 1em;}
-.prHeader {font-weight: bold;}
-.prAverageScore {font-weight: bold;}
-.prCategoryHeader {font-weight: bold; border-top: 1px solid gray; margin-top: 5px; padding-top: 5px;}
-.prParentSignature {font-weight: bold; border-top: 1px solid gray; margin-top: 5px; border-bottom: 1px solid black; padding-top: 35px;}
-.prCurrentGrade {font-weight: bold;}
-.prSummary {font-weight: bold; border-top: 1px solid gray; margin-top: 5px; padding-top: 5px;}
-.prNotes {padding-left: 10px;}
-.prTotalScore {font-weight: bold;}
-.pr div {border: none;}
-
-.progressReportTable {width: 500px;}
-.progressReportTable tr td:nth-child(1) {width: 400px;}
-.progressReportTable tr td:nth-child(2) {width: 75px;}
-.title {font-weight: bold;}
-.categoryName td {font-weight: bold; margin-top: 15px;}
-.itemDescription td {}
-.itemGrade td {}
-.item {line-height: 1.2em;}
-.average td:nth-child(1) {font-weight: bold;}
-.contribution {border-bottom: 1px solid gray; padding-bottom: 15px;}
-.summaryHeader {font-weight: bold;}
-.currentGrade {font-weight: bold; line-height: 1em; border-bottom: 1px solid gray;}
-.currentGrade td {padding-bottom: 15px;}
-.sendEmail {margin-left: 15px;}
-*/
+.top-separator {margin-bottom: 15px;}
+.on {background-color: red;}
+.off {background-color: #222;}
+.binary-clock {border-spacing: 10px; border-collapse: separate;}
+.led {height: 30px; width: 30px;}
+.led-header {text-align: center;}
+.top-pad {margin-top: 10px;}

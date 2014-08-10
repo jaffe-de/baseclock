@@ -1,4 +1,4 @@
-define(['constants'], function (constants) {
+define(['knockout', 'constants'], function (ko, constants) {
 	
 	return function vmFooter() {
 		this.version = ko.observable(constants.version);

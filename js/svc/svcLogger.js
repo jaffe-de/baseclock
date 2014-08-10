@@ -22,7 +22,7 @@ define(['constants'], function (constants) {
 				}
 				console.log('-----------------------------------');
 			}
-		};
+		}
 	};
 	return {
 		log: log

@@ -1,4 +1,4 @@
-define(['logger'], function(logger) {
+define(['logger', 'jquery'], function(logger, $) {
 
   var SvcMessages = function() {
     var _this = this;

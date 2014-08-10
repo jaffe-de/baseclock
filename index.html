@@ -2,125 +2,100 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title>Gradebook</title>
+	<title>One Cool Clock</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" href="css/jquery-ui-min.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery-ui.structure.min.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery-ui.theme.min.css" type="text/css">
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/clock.css" type="text/css">
 
-	<!-- <script type='text/javascript' src='js/lib/jquery/jquery-1.10.2.min.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/jquery/jquery-ui-1.10.3.custom.min.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/jquery/jquery.csv.js'></script> -->
-	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script> -->
-	<!-- <script type='text/javascript' src='js/lib/jquery/jquery.jqprint-0.3.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/jquery/jquery.printElement.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/jquery/jquery.ui.timepicker.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/jquery/jquery.validate.min.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/jquery/jquery.validate.additional-methods.min.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/knockout/knockout-3.0.0.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/knockout/knockout.mapping.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/modernizr/modernizr-2.0.6.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/bootstrap/bootstrap.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/bootstrap/bootstrap-timepicker.min.js'></script> -->
-	<!-- <script type="text/javascript" src='http://www.fuelcdn.com/fuelux/2.4.1/loader.min.js'></script> -->
-	<!-- <script type='text/javascript' src='js/lib/bootstrap/bootbox.min.js'></script> -->
-	<!-- <script type='text/javascript' src="https://cdn.firebase.com/v0/firebase.js"></script> -->
-	<!-- <script type='text/javascript' src='js/mod/modUtilities.js'></script> -->
-
-	<script src='js/app/appGbConfig.js'></script>
-	<script data-main="gradebook.js" src='js/lib/require/require.js'></script>
+	<script src='js/app/appConfig.js'></script>
+	<script data-main="clock.js" src='js/lib/require/require.js'></script>
 
 </head>
 
 <body class="container hide-on-startup">
 	
-	<div id="header" data-bind="visible: visible" class="row">
-		<div class="col-md-6 header-title-left">
-			<h3>
-				<span data-bind="html: headerTitle">No gradebook selected</span>
-			</h3>
-		</div>
-		<div class="col-md-6 header-title-right">
-			<h3>
-				<span data-bind="html: headerTeacherName">Name</span>
-			</h3>
+	<div id="header" class="row top-separator">
+		<div class="col-md-12 text-center">
+			<h2>One Cool Clock!</h2>
 		</div>
 	</div>
 	
-	<div id="login" class="row text-center" data-bind="visible: visible">
-		<h3>Gradebook Login</h3>
-		<p>&nbsp;</p>
-		<form class="form-horizontal" role="form" action="#">
-			<div class="form-group">
-				<div class="col-md-3">&nbsp;</div>
-				<label for="username" class="col-md-2 control-label"></label>
-				<div class="col-md-3">
-					<p data-bind="visible: loginFailed" class="error-text">Username / Password invalid</p>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-md-3">&nbsp;</div>
-				<label for="username" class="col-md-2 control-label">Username</label>
-				<div class="col-md-3">
-					<input type="text" class="form-control" placeholder="Username" data-bind="value: username, valueUpdate: 'keyup'">
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-md-3">&nbsp;</div>
-				<label for="password" class="col-md-2 control-label">Password</label>
-				<div class="col-md-3">
-					<input type="password" class="form-control" placeholder="Password" data-bind="value: password, valueUpdate: 'keyup'">
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-md-5">&nbsp;</div>
-				<div class="col-md-2">
-					<button class="btn btn-primary" data-bind="click: login, enable: canLogin">Login</button>
-				</div>
-			</div>
-		</form>
+	<div id="view-decimal" class="row text-center top-separator">
+		<div class="col-md-6 col-sm-6 text-right">
+			<span>Decimal:</span>
+		</div>
+		<div class="col-md-6 col-sm-6 text-left">		
+			<span data-bind="text: time, visible: visible"></span>
+		</div>
 	</div>
-		
-	<div class="content-container hide-on-startup">
 
-		<div class="row">
-			<ul class="col-md-12 nav nav-tabs panel">
-			  <li class="active"><a href="#tabsMainStudents" data-toggle="tab">Students</a></li>
-			  <li><a href="#tabsMainAttendance" data-toggle="tab">Check-in</a></li>
-			  <li><a href="#tabsMainAssignments" data-toggle="tab">Assignments</a></li>
-			  <li><a href="#tabsMainCategories" data-toggle="tab">Categories</a></li>
-			  <li><a href="#tabsMainClasses" data-toggle="tab">Classes</a></li>
-			  <!-- <li><a href="#tabsMainExams" data-toggle="tab">Exams</a></li> -->
-			  <li><a href="#tabsMainAnalysis" data-toggle="tab">Analysis</a></li>
-			  <li><a href="#tabsMainEmail" data-toggle="tab">Email</a></li>
-			  <li><a href="#tabsMainGradebooks" data-toggle="tab">Gradebooks</a></li>
-			  <li><a href="#tabsMainMyAccount" data-toggle="tab">My account</a></li>
-			</ul>
+	<div id="view-binary" class="row text-center top-separator">
+		<div class="col-md-6 col-sm-6 text-right">
+			<span>Binary:</span>
 		</div>
-
-		<!-- Tab panes -->
-		<div class="row tab-content">
-		
-			<!-- Main -- Students tab  						-->
-		  <div class="tab-pane active" id="tabsMainStudents" template="temp/students.html"></div>	
-		  <div class="tab-pane" id="tabsMainAttendance" template="temp/attendance.html"></div>
-		  <div class="tab-pane" id="tabsMainAssignments" template="temp/assignments.html"></div>
-		  <div class="tab-pane" id="tabsMainCategories" template="temp/categories.html"></div>
-		  <div class="tab-pane" id="tabsMainClasses" template="temp/classes.html"></div>
-		  <!-- <div class="tab-pane" id="tabsMainExams">exams</div> -->
-		  <div class="tab-pane" id="tabsMainAnalysis">analysis</div>
-		  <div class="tab-pane" id="tabsMainEmail" template="temp/email.html"></div>
-		  <div class="tab-pane" id="tabsMainGradebooks" template="temp/gradebooks.html"></div>
-		  <div class="tab-pane" id="tabsMainMyAccount" template="temp/my.account.html"></div>
-	
+		<div class="col-md-6 col-sm-6 text-left">		
+			<span data-bind="text: time, visible: visible"></span>
 		</div>
 	</div>
+
+	<div id="view-octal" class="row text-center top-separator">
+		<div class="col-md-6 col-sm-6 text-right">
+			<span>Octal:</span>
+		</div>
+		<div class="col-md-6 col-sm-6 text-left">		
+			<span data-bind="text: time, visible: visible"></span>
+		</div>
+	</div>
+
+	<div id="view-hex" class="row text-center top-separator">
+		<div class="col-md-6 col-sm-6 text-right">
+			<span>Hexadecimal:</span>
+		</div>
+		<div class="col-md-6 col-sm-6 text-left">		
+			<span data-bind="text: time, visible: visible"></span>
+		</div>
+	</div>
+
+	<div id="view-binary-leds" class="row text-center top-separator">
+		<div class="col-md-6 col-sm-6 text-right">
+			<div class="top-pad">Binary LEDs:</div>
+		</div>
+		<div class="col-md-6 col-sm-6 text-left">		
+			<table class="binary-clock">
+				<thead>
+					<tr>
+					  <th>
+					  	<div class="led-header">H</div>
+					  </th>
+					  <th>
+					  	<div class="led-header">M</div>
+					  </th>
+					  <th>
+					  	<div class="led-header">S</div>
+					  </th>
+					</tr>
+				</thead>
+				<tbody data-bind="foreach: data">
+					<tr data-bind="foreach: $data">
+						<td>
+							<div class="led" data-bind="css: {on: $data, off: !$data}"></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div id="view-control" class="row text-center top-separator">
+		<button class="btn btn-primary btn-xs" data-bind="text: buttonLabel, click: pause, css: {'btn-danger': paused(), 'btn-success': !paused()}"></button>
+	</div>
 	
-	<div id="footer" class="row">
-		<p class="small text-center">Gradebook V<span data-bind="text: version"></span>, &copy; <span data-bind="text: copyrightYear"></span> <span data-bind="text: author"></span><br /><a data-bind="attr: {href: webpage}, html: webpage"></a></p>
+	<div id="footer" class="row footer">
+		<p class="small text-center">One Cool Clock V<span data-bind="text: version"></span>, &copy; <span data-bind="text: copyrightYear"></span> <span data-bind="text: author"></span></p>
 	</div>
 
 </body>

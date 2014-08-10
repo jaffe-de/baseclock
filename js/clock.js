@@ -1,4 +1,4 @@
-require(['domReady', 'app/appGradebook'], function (domReady, gradebook) {
+require(['domReady', 'app/appClock'], function (domReady, clock) {
 	domReady(function () {
 
 		// From http://stackoverflow.com/questions/2400935/browser-detection-in-javascript,
@@ -11,10 +11,10 @@ require(['domReady', 'app/appGradebook'], function (domReady, gradebook) {
 		  return M;
 		 })();
 
-		if (browser[0].toLowerCase() === 'msie') {
-			alert("Gradebook doesn't support Internet Explorer.  Please use a real web browser like Chrome or Firefox");
-		} else {
-			gradebook.init();
-		}
+		// if (browser[0].toLowerCase() === 'msie') {
+		// 	alert("Gradebook doesn't support Internet Explorer.  Please use a real web browser like Chrome or Firefox");
+		// } else {
+		clock.init();
+		// }
 	});
 });
