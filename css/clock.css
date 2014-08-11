@@ -12,6 +12,8 @@ table {
 	color: #fff;
 }
 
+a:link {text-decoration: underline;}
+
 .footer {font-size: .5em;}
 .hide-on-startup {display: none;}
 .top-separator {margin-bottom: 15px;}
