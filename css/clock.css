@@ -10,12 +10,14 @@ table {
 	background: #222;
 	border-radius: 10px;
 	color: #fff;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer {font-size: .5em;}
 .hide-on-startup {display: none;}
 .top-separator {margin-bottom: 15px;}
-.divider {border-bottom: 1px solid #fff;}
+.divider {border-bottom: 1px solid #666;}
 
 /*.on-hour {background-color: #f00;}*/
 .on-hour {
