@@ -69,6 +69,9 @@
 				<thead>
 					<tr>
 					  <th>
+					  	<div class="led-header">&nbsp;</div>
+					  </th>
+					  <th>
 					  	<div class="led-header">H</div>
 					  </th>
 					  <th>
@@ -79,10 +82,83 @@
 					  </th>
 					</tr>
 				</thead>
-				<tbody data-bind="foreach: data">
-					<tr data-bind="foreach: $data">
+				<tbody>
+					<tr><td colspan="4" class="divider"></td></tr>
+					<tr>
+						<td class="text-center">32</td>
 						<td>
-							<div class="led" data-bind="css: {on: $data, off: !$data}"></div>
+							<div class="led" data-bind="css: {'on-hour': hour()[0], 'off-hour': !hour()[0]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-minute': minute()[0], 'off-minute': !minute()[0]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-second': second()[0], 'off-second': !second()[0]}"></div>
+						</td>
+					</tr>
+					<tr><td colspan="4" class="divider"></td></tr>
+					<tr>
+						<td class="text-center">16</td>
+						<td>
+							<div class="led" data-bind="css: {'on-hour': hour()[1], 'off-hour': !hour()[1]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-minute': minute()[1], 'off-minute': !minute()[1]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-second': second()[1], 'off-second': !second()[1]}"></div>
+						</td>
+					</tr>
+					<tr><td colspan="4" class="divider"></td></tr>
+					<tr>
+						<td class="text-center">8</td>
+						<td>
+							<div class="led" data-bind="css: {'on-hour': hour()[2], 'off-hour': !hour()[2]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-minute': minute()[2], 'off-minute': !minute()[2]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-second': second()[2], 'off-second': !second()[2]}"></div>
+						</td>
+					</tr>
+					<tr><td colspan="4" class="divider"></td></tr>
+					<tr>
+						<td class="text-center">4</td>
+						<td>
+							<div class="led" data-bind="css: {'on-hour': hour()[3], 'off-hour': !hour()[3]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-minute': minute()[3], 'off-minute': !minute()[3]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-second': second()[3], 'off-second': !second()[3]}"></div>
+						</td>
+					</tr>
+					<tr><td colspan="4" class="divider"></td></tr>
+					<tr>
+						<td class="text-center">2</td>
+						<td>
+							<div class="led" data-bind="css: {'on-hour': hour()[4], 'off-hour': !hour()[4]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-minute': minute()[4], 'off-minute': !minute()[4]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-second': second()[4], 'off-second': !second()[4]}"></div>
+						</td>
+					</tr>
+					<tr><td colspan="4" class="divider"></td></tr>
+					<tr>
+						<td class="text-center">1</td>
+						<td>
+							<div class="led" data-bind="css: {'on-hour': hour()[5], 'off-hour': !hour()[5]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-minute': minute()[5], 'off-minute': !minute()[5]}"></div>
+						</td>
+						<td>
+							<div class="led" data-bind="css: {'on-second': second()[5], 'off-second': !second()[5]}"></div>
 						</td>
 					</tr>
 				</tbody>

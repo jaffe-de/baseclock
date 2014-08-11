@@ -5,22 +5,15 @@ define(['knockout', 'messages', 'utilities'], function (ko, messages, utilities)
 		var _this = this;
 		
 		this.visible = ko.observable(false);
-		this.data = ko.observableArray([]);
+		this.hour = ko.observableArray([]);
+		this.minute = ko.observableArray([]);
+		this.second = ko.observableArray([]);
 
 		messages.subscribe('clock.update', function (time) {
 			_this.visible(true);
-			var hour = toBinary(time.hour, 6);
-			var minute = toBinary(time.minute, 6);
-			var second = toBinary(time.second, 6);
-			var data = [];
-			for (var i=0; i<6; i++) {
-				var row = [];
-				row.push(hour[i]);
-				row.push(minute[i]);
-				row.push(second[i]);
-				data.push(row);
-			}
-			_this.data(data);
+			_this.hour(toBinary(time.hour, 6));
+			_this.minute(toBinary(time.minute, 6));
+			_this.second(toBinary(time.second, 6));
 		});
 
 		function toBinary(n, digits) {

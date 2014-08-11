@@ -6,12 +6,65 @@ body {
 }
 input, textarea, select, h2, h3, h4, h5, h6 {color: #2e6e9e;}
 
+table {
+	background: #222;
+	border-radius: 10px;
+	color: #fff;
+}
+
 .footer {font-size: .5em;}
 .hide-on-startup {display: none;}
 .top-separator {margin-bottom: 15px;}
-.on {background-color: red;}
-.off {background-color: #222;}
+.divider {border-bottom: 1px solid #fff;}
+
+/*.on-hour {background-color: #f00;}*/
+.on-hour {
+    width: 30px;
+    height: 30px;
+    background-color: #f00;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #800 0 -1px 9px, #F00 0 2px 12px;
+}
+.off-hour {
+    width: 30px;
+    height: 30px;
+    background-color: #400;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #200 0 -1px 9px, #000 0 2px 12px;
+}
+
+.on-minute {
+    width: 30px;
+    height: 30px;
+    background-color: #0ff;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #088 0 -1px 9px, #0ff 0 2px 12px;
+}
+.off-minute {
+    width: 30px;
+    height: 30px;
+    background-color: #044;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #022 0 -1px 9px, #044 0 2px 12px;
+}
+
+.on-second {
+    width: 30px;
+    height: 30px;
+    background-color: #0f0;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #080 0 -1px 9px, #0f0 0 2px 12px;
+}
+.off-second {
+    width: 30px;
+    height: 30px;
+    background-color: #040;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #020 0 -1px 9px, #040 0 2px 12px;	
+}
+
 .binary-clock {border-spacing: 10px; border-collapse: separate;}
-.led {height: 30px; width: 30px;}
+/*.led {height: 30px; width: 30px; border-radius: 15px; border: 2px solid #000;}*/
 .led-header {text-align: center;}
 .top-pad {margin-top: 10px;}
+
