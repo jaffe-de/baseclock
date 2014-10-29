@@ -14,7 +14,7 @@ define(['knockout', 'messages', 'utilities'], function (ko, messages, utilities)
 
 		messages.subscribe('clock.update', function (time) {
 			_this.visible(true);
-			_this.hour(utilities.leadingZero(time.hour.toString(2), 5));
+			_this.hour(utilities.leadingZero(time.hour.toString(2), 6));
 			_this.minute(utilities.leadingZero(time.minute.toString(2), 6));
 			_this.second(utilities.leadingZero(time.second.toString(2), 6));			
 		});
